@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aprendo Contigo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pantalla Bienvenida -->
+  <section id="bienvenida" class="pantalla activa">
+    <h1>Aprendo Contigo</h1>
+    <label for="nombre">Escribe tu nombre:</label>
+    <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="off" />
+    
+    <div id="sexoSelector">
+      <p>Selecciona tu género:</p>
+      <button class="sexoBtn" data-sexo="nino">Niño 👦</button>
+      <button class="sexoBtn" data-sexo="nina">Niña 👧</button>
+    </div>
+
+    <label>Selecciona tu avatar:</label><br>
+  <div id="avatars">
+    <button class="avatar" data-emoji="🦊">🦊</button>
+    <button class="avatar" data-emoji="🐵">🐵</button>
+    <button class="avatar" data-emoji="🐰">🐰</button>
+    <button class="avatar" data-emoji="🐼">🐼</button>
+  </div><br>
+
+    <button id="botonIniciar" disabled>Iniciar</button>
+  </section>
+  
+
+  <!-- Menú Principal -->
+  <section id="menuPrincipal" class="pantalla">
+    <h2 id="saludoUsuario"></h2>
+    <p>Elige un área para comenzar:</p>
+    <div class="areas">
+      <button class="areaBtn" data-area="matematicas">Matemáticas 🧮</button>
+      <button class="areaBtn" data-area="lenguaje">Lenguaje 📝</button>
+      <button class="areaBtn" data-
+      <button class="areaBtn" data-area="zonaFamiliar">Zona Familiar 🏠</button>
+    </div>
+  </section>
+
+  <!-- ZONA FAMILIAR -->
+  <section id="zonaFamiliarPantalla" class="pantalla">
+    <h2>Zona Familiar</h2>
+    <article id="textoZonaFamiliar">
+      <h3>Síndrome de Down</h3>
+      <p>El Síndrome de Down es una condición genética que se caracteriza por la presencia de una copia extra del cromosoma 21. Esto provoca diferencias en el desarrollo físico e intelectual.</p>
+      <h3>Cuidados</h3>
+      <ul>
+        <li>Atención médica constante</li>
+        <li>Estimulación temprana</li>
+        <li>Apoyo emocional y social</li>
+        <li>Adaptaciones educativas personalizadas</li>
+      </ul>
+      <h3>Apoyos para la familia</h3>
+      <ul>
+        <li>Grupos de apoyo</li>
+        <li>Capacitaciones y talleres</li>
+        <li>Asesoría psicológica</li>
+        <li>Recursos educativos y comunitarios</li>
+      </ul>
+    </article>
+    <button id="btnVolverMenuZona" class="btnSalir">Volver al menú principal</button>
+  </section>
+
+  <!-- MENÚ NIVELES - Matemáticas -->
+  <section id="matematicasNiveles" class="pantalla">
+    <h2>Matemáticas - Elige un nivel</h2>
+    <div class="niveles">
+      <button class="nivelBtn" data-nivel="1">Nivel 1</button>
+      <button class="nivelBtn" data-nivel="2">Nivel 2</button>
+      <button class="nivelBtn" data-nivel="3">Nivel 3</button>
+    </div>
+    <button id="volverMenuMatematicas" class="btnSalir">Volver al menú principal</button>
+  </section>
+
+  <!-- NIVEL 1 MATEMATICAS -->
+  <section id="matematicasNivel1" class="pantalla">
+    <h3>Matemáticas - Nivel 1</h3>
+
+    <div id="juegoMat1-1" class="juego" style="display:none;">
+      <p>¿Cuánto es 1 + 2?</p>
+      <input type="number" id="respuestaMat1-1" autocomplete="off" />
+      <button id="btnRevisarMat1-1">Revisar</button>
+      <p id="resultadoMat1-1"></p>
+    </div>
+
+    <div id="juegoMat1-2" class="juego" style="display:none;">
+      <p>¿Cuánto es 5 - 3?</p>
+      <input type="number" id="respuestaMat1-2" autocomplete="off" />
+      <button id="btnRevisarMat1-2">Revisar</button>
+      <p id="resultadoMat1-2"></p>
+    </div>
+
+    <div id="juegoMat1-3" class="juego" style="display:none;">
+      <p>¿Cuánto es 2 + 2?</p>
+      <input type="number" id="respuestaMat1-3" autocomplete="off" />
+      <button id="btnRevisarMat1-3">Revisar</button>
+      <p id="resultadoMat1-3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoMat1">Siguiente Juego</button>
+    <button id="btnVolverNivelesMat1" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirMat1" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 2 MATEMATICAS -->
+  <section id="matematicasNivel2" class="pantalla">
+    <h3>Matemáticas - Nivel 2</h3>
+
+    <div id="juegoMat2-1" class="juego" style="display:none;">
+      <p>¿Cuánto es 7 - 3?</p>
+      <input type="number" id="respuestaMat2-1" autocomplete="off" />
+      <button id="btnRevisarMat2-1">Revisar</button>
+      <p id="resultadoMat2-1"></p>
+    </div>
+
+    <div id="juegoMat2-2" class="juego" style="display:none;">
+      <p>¿Cuál es el siguiente número? 10, 12, 14, ___</p>
+      <input type="number" id="respuestaMat2-2" autocomplete="off" />
+      <button id="btnRevisarMat2-2">Revisar</button>
+      <p id="resultadoMat2-2"></p>
+    </div>
+
+    <div id="juegoMat2-3" class="juego" style="display:none;">
+      <p>¿Cuánto es 5 x 2?</p>
+      <input type="number" id="respuestaMat2-3" autocomplete="off" />
+      <button id="btnRevisarMat2-3">Revisar</button>
+      <p id="resultadoMat2-3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoMat2">Siguiente Juego</button>
+    <button id="btnVolverNivelesMat2" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirMat2" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 3 MATEMATICAS -->
+  <section id="matematicasNivel3" class="pantalla">
+    <h3>Matemáticas - Nivel 3</h3>
+
+    <div id="juegoMat3-1" class="juego" style="display:none;">
+      <p>¿Cuánto es 12 ÷ 3?</p>
+      <input type="number" id="respuestaMat3-1" autocomplete="off" />
+      <button id="btnRevisarMat3-1">Revisar</button>
+      <p id="resultadoMat3-1"></p>
+    </div>
+
+    <div id="juegoMat3-2" class="juego" style="display:none;">
+      <p>¿Cuánto es 15 - 7?</p>
+      <input type="number" id="respuestaMat3-2" autocomplete="off" />
+      <button id="btnRevisarMat3-2">Revisar</button>
+      <p id="resultadoMat3-2"></p>
+    </div>
+
+    <div id="juegoMat3-3" class="juego" style="display:none;">
+      <p>¿Cuál es el siguiente número? 20, 18, 16, ___</p>
+      <input type="number" id="respuestaMat3-3" autocomplete="off" />
+      <button id="btnRevisarMat3-3">Revisar</button>
+      <p id="resultadoMat3-3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoMat3">Siguiente Juego</button>
+    <button id="btnVolverNivelesMat3" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirMat3" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- MENÚ NIVELES - Lenguaje -->
+  <section id="lenguajeNiveles" class="pantalla">
+    <h2>Lenguaje - Elige un nivel</h2>
+    <div class="niveles">
+      <button class="nivelBtnLenguaje" data-nivel="1">Nivel 1</button>
+      <button class="nivelBtnLenguaje" data-nivel="2">Nivel 2</button>
+      <button class="nivelBtnLenguaje" data-nivel="3">Nivel 3</button>
+    </div>
+    <button id="volverMenuLenguaje" class="btnSalir">Volver al menú principal</button>
+  </section>
+
+  <!-- NIVEL 1 LENGUAJE -->
+  <section id="lenguajeNivel1" class="pantalla">
+    <h3>Lenguaje - Nivel 1</h3>
+    
+    <div id="juegoLen1-1" class="juego" style="display:none;">
+      <p>¿Cuál es la primera letra de "Gato"?</p>
+      <button class="respuestaL1" data-resp="G">G</button>
+      <button class="respuestaL1" data-resp="A">A</button>
+      <button class="respuestaL1" data-resp="T">T</button>
+      <p id="resultadoL1"></p>
+    </div>
+
+    <div id="juegoLen1-2" class="juego" style="display:none;">
+      <p>¿Cuál es esta imagen? (Sol ☀️)</p>
+      <button class="respuestaL2" data-resp="correcto">Sol</button>
+      <button class="respuestaL2" data-resp="incorrecto">Luna</button>
+      <p id="resultadoL2"></p>
+    </div>
+
+    <div id="juegoLen1-3" class="juego" style="display:none;">
+      <p>Escribe la primera letra de "Casa":</p>
+      <input type="text" id="respuestaL3" maxlength="1" autocomplete="off" />
+      <button id="btnRevisarL3">Revisar</button>
+      <p id="resultadoL3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoLen1">Siguiente Juego</button>
+    <button id="btnVolverNivelesLen1" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirLen1" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 2 LENGUAJE -->
+  <section id="lenguajeNivel2" class="pantalla">
+    <h3>Lenguaje - Nivel 2</h3>
+
+    <div id="juegoLen2-1" class="juego" style="display:none;">
+      <p>Completa la palabra: _ a r r o</p>
+      <input type="text" id="respuestaLen2-1" maxlength="1" autocomplete="off" />
+      <button id="btnRevisarLen2-1">Revisar</button>
+      <p id="resultadoLen2-1"></p>
+    </div>
+
+    <div id="juegoLen2-2" class="juego" style="display:none;">
+      <p>Selecciona la palabra correcta para esta imagen (manzana 🍎)</p>
+      <button class="respuestaLen2" data-resp="correcto">Manzana</button>
+      <button class="respuestaLen2" data-resp="incorrecto">Pera</button>
+      <p id="resultadoLen2-2"></p>
+    </div>
+
+    <div id="juegoLen2-3" class="juego" style="display:none;">
+      <p>Escribe la palabra "Sol":</p>
+      <input type="text" id="respuestaLen2-3" autocomplete="off" />
+      <button id="btnRevisarLen2-3">Revisar</button>
+      <p id="resultadoLen2-3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoLen2">Siguiente Juego</button>
+    <button id="btnVolverNivelesLen2" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirLen2" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 3 LENGUAJE -->
+  <section id="lenguajeNivel3" class="pantalla">
+    <h3>Lenguaje - Nivel 3</h3>
+
+    <div id="juegoLen3-1" class="juego" style="display:none;">
+      <p>Selecciona la letra que falta en "Ca_a" (Casa):</p>
+      <button class="respuestaLen3" data-resp="s">S</button>
+      <button class="respuestaLen3" data-resp="r">R</button>
+      <p id="resultadoLen3-1"></p>
+    </div>
+
+    <div id="juegoLen3-2" class="juego" style="display:none;">
+      <p>¿Qué palabra es esta? (Imagen de Perro 🐶)</p>
+      <button class="respuestaLen3" data-resp="correcto">Perro</button>
+      <button class="respuestaLen3" data-resp="incorrecto">Gato</button>
+      <p id="resultadoLen3-2"></p>
+    </div>
+
+    <div id="juegoLen3-3" class="juego" style="display:none;">
+      <p>Escribe la palabra "Agua":</p>
+      <input type="text" id="respuestaLen3-3" autocomplete="off" />
+      <button id="btnRevisarLen3-3">Revisar</button>
+      <p id="resultadoLen3-3"></p>
+    </div>
+
+    <button id="btnSiguienteJuegoLen3">Siguiente Juego</button>
+    <button id="btnVolverNivelesLen3" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirLen3" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- MENÚ NIVELES - Habilidades Sociales -->
+  <section id="habilidadesNiveles" class="pantalla">
+    <h2>Habilidades Sociales - Elige un nivel</h2>
+    <div class="niveles">
+      <button class="nivelBtnHabilidades" data-nivel="1">Nivel 1</button>
+      <button class="nivelBtnHabilidades" data-nivel="2">Nivel 2</button>
+    </div>
+    <button id="volverMenuHabilidades" class="btnSalir">Volver al menú principal</button>
+  </section>
+
+  <!-- NIVEL 1 HABILIDADES SOCIALES -->
+  <section id="habilidadesNivel1" class="pantalla">
+    <h3>Habilidades Sociales - Nivel 1</h3>
+
+    <!-- Juegos similares con opciones de botón -->
+
+    <p>Ejemplo juego Habilidades Sociales Nivel 1...</p>
+
+    <button id="btnSiguienteJuegoHab1">Siguiente Juego</button>
+    <button id="btnVolverNivelesHab1" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirHab1" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 2 HABILIDADES SOCIALES -->
+  <section id="habilidadesNivel2" class="pantalla">
+    <h3>Habilidades Sociales - Nivel 2</h3>
+    <p>Ejemplo juego Habilidades Sociales Nivel 2...</p>
+    <button id="btnVolverNivelesHab2" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirHab2" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- MENÚ NIVELES - Autonomía -->
+  <section id="autonomiaNiveles" class="pantalla">
+    <h2>Autonomía - Elige un nivel</h2>
+    <div class="niveles">
+      <button class="nivelBtnAutonomia" data-nivel="1">Nivel 1</button>
+      <button class="nivelBtnAutonomia" data-nivel="2">Nivel 2</button>
+    </div>
+    <button id="volverMenuAutonomia" class="btnSalir">Volver al menú principal</button>
+  </section>
+
+  <!-- NIVEL 1 AUTONOMÍA -->
+  <section id="autonomiaNivel1" class="pantalla">
+    <h3>Autonomía - Nivel 1</h3>
+    <p>Ejemplo juego Autonomía Nivel 1...</p>
+    <button id="btnVolverNivelesAut1" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirAut1" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- NIVEL 2 AUTONOMÍA -->
+  <section id="autonomiaNivel2" class="pantalla">
+    <h3>Autonomía - Nivel 2</h3>
+    <p>Ejemplo juego Autonomía Nivel 2...</p>
+    <button id="btnVolverNivelesAut2" class="btnSalir">Volver a niveles</button>
+    <button id="btnSalirAut2" class="btnSalir">Salir al menú principal</button>
+  </section>
+
+  <!-- CONTENEDOR MEDALLA Y CONFETI -->
+  <div id="medallaContainer" class="medallaOculta">
+    <div id="medalla">
+      🏅
+      <p>¡Felicidades! Completaste esta área</p>
+      <button id="btnCerrarMedalla">Cerrar</button>
+    </div>
+    <canvas id="confetiCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
